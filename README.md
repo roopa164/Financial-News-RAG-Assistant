@@ -1,0 +1,65 @@
+🗞️ Financial News RAG Assistant
+An AI-powered Retrieval-Augmented Generation (RAG) system that analyzes financial news about companies like Apple and DeepSeek. This project features a FastAPI backend (the engine) and a Streamlit frontend (the dashboard).
+
+🏗️ Project Architecture
+The system is divided into two main services to ensure scalability and clean code:
+
+Backend (FastAPI): Handles document retrieval from ChromaDB and answer generation via OpenAI.
+
+Frontend (Streamlit): Provides a user-friendly chat interface with side-by-side source verification.
+
+📁 Folder Structure
+Plaintext
+
+AI_Project_2026/
+├── src/                # Core logic (Brain)
+│   ├── ingestion.py    # JSON Data -> ChromaDB
+│   └── generation.py   # RAG Chain logic
+├── app.py              # FastAPI Server (The Engine)
+├── ui.py               # Streamlit App (The Face)
+├── chroma_db/          # Vector Database storage
+├── .env                # API Keys (Excluded from Git)
+└── requirements.txt    # Project dependencies
+🛠️ Installation & Setup
+Clone the repository:
+
+Bash
+
+git clone <your-repo-url>
+cd AI_Project_2026
+Install dependencies:
+
+Bash
+
+pip install -r requirements.txt
+Configure Environment Variables: Create a .env file in the root directory and add your OpenAI key:
+
+Plaintext
+
+OPENAI_API_KEY=sk-xxxx...
+🚀 How to Run
+You need to run the backend and frontend in separate terminal windows.
+
+Step 1: Start the FastAPI Backend
+Bash
+
+uvicorn app:app --reload
+The API will be available at http://127.0.0.1:8000. You can view the interactive API docs at /docs.
+
+Step 2: Start the Streamlit Frontend
+Bash
+
+streamlit run ui.py
+The dashboard will open automatically in your browser.
+
+📊 Evaluation & Metrics
+This project uses the Ragas framework to measure performance across:
+
+Faithfulness: Ensuring the AI doesn't hallucinate.
+
+Answer Relevance: Checking if the answer actually addresses the user's query.
+
+Context Precision: Measuring how "noisy" the retrieved news snippets are.
+
+💡 Implementation Note
+This project uses langchain-classic to maintain compatibility with the RetrievalQA chain while benefiting from the speed of the 2026 LangChain v1.x core.

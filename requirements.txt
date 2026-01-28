@@ -1,0 +1,13 @@
+langchain>=1.0.0
+langchain-openai
+langchain-community
+langchain-classic     # Essential for RetrievalQA
+chromadb
+python-dotenv
+ragas
+datasets
+pandas
+streamlit
+fastapi
+uvicorn               # Needed to run your FastAPI 'Engine'
+requests              # Needed for the UI to talk to the API
