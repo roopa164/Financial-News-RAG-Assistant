@@ -29,7 +29,7 @@ Clone the repository:
 
     Bash
     
-    git clone <your-repo-url>
+    git clone https://github.com/roopa164/Financial-News-RAG-Assistant.git
     cd AI_Project_2026
     Install dependencies:
 
