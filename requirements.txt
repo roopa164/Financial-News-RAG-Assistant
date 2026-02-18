@@ -11,3 +11,4 @@ streamlit
 fastapi
 uvicorn               # Needed to run your FastAPI 'Engine'
 requests              # Needed for the UI to talk to the API
+structlog
