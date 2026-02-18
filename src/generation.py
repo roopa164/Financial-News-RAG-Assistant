@@ -5,6 +5,10 @@ from langchain_classic.chains import RetrievalQA
 # FIXED: Base logic like prompts live in langchain_core
 from langchain_core.prompts import PromptTemplate
 
+# Load the .env file
+from dotenv import load_dotenv
+load_dotenv()
+
 def get_rag_chain(persist_dir):
     # Initialize the vector database
     vector_db = Chroma(
