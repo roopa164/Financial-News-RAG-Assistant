@@ -61,6 +61,13 @@ AI_Project_2026/
       └── requirements.txt    # Project dependencies
 🛠️ Installation & Setup
 
+Clone the repository:
+
+    Bash
+    
+    git clone https://github.com/roopa164/Financial-News-RAG-Assistant.git
+    cd AI_Project_2026
+    Install dependencies:
 
     Bash
     
