@@ -10,6 +10,42 @@ The system is divided into two main components to ensure scalability and clean s
 
   - Frontend (Streamlit): A web dashboard where users can submit questions and view the AI's answer alongside the specific news snippets used as evidence.
 
+
+🔍 Observability & Monitoring
+
+Production-ready AI systems require visibility beyond just functionality. This project integrates LLM tracing and structured logging to ensure debuggability, transparency, and operational readiness.
+
+ 1️⃣ LangSmith Tracing (LLM-Level Observability)
+
+    The RAG pipeline is instrumented with LangSmith to trace:
+
+    Retrieval inputs and outputs
+
+    Prompt construction
+
+    LLM responses
+
+    Token usage
+
+    Latency per run
+
+Each user query is logged as a trace, allowing inspection of:
+
+    Retrieved documents
+
+    Final composed prompt
+
+    Model response
+
+    Execution time
+
+This makes it possible to debug hallucinations, diagnose retrieval failures, and optimize performance.
+
+To enable tracing, add the following to your .env:
+
+
+
+
 📁 Folder Structure
 Plaintext
 
@@ -25,13 +61,6 @@ AI_Project_2026/
       └── requirements.txt    # Project dependencies
 🛠️ Installation & Setup
 
-Clone the repository:
-
-    Bash
-    
-    git clone <your-repo-url>
-    cd AI_Project_2026
-    Install dependencies:
 
     Bash
     
